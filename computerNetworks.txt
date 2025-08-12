@@ -1,1 +1,52 @@
+OSI Model: Open System Interconnection Model
+--------------------------------------------
+It describes how the data is transmitted from one computer to another computer in a computer network. (Two or more devices connected via internet).
+
+In the most basic from 2 computers connected using LAN and connectors (RJ45) shares data using Network Interface Card forms Computer Networks.
+But if both the computers have different OS its communication happens using the OSI model.
+
+OSI MODEL: It was introduced by International Organization of Standardization
+-----------------------------------------------------------------------------
+It comprises of 7 layers:
+1. Application Layer
+2. Presentation Layer
+3. Session Layer
+4. Transport Layer
+5. Network Layer
+6. DataLink Layer
+7. Physical Layer
+
+" Each Layer contains Package of protocols "
+
+1. Application Layer: It provides services to the Network Applications
+---------------------
+Network Application: Computer Applications that requires Internet.
+It contains protocols that helps to make the network applications like chrome, firefox work correctly.
+
+The network applications use application layer protocols. There are dozens of Application Layer protocols 
+(HTTP, HTTPS, FTP, SNMP, DHCP, IRC, POP3, TELNET) each having its own functionalities.
+1. File Transfer = FTP
+2. Web Surfing = HTTP, HTTPS
+3. Emails = SMTP
+4. Virtual Terminals = Telnet
+
+2. Presentation Layer:
+----------------------
+- It receives data from Application Layer
+- It is in the form of correctors and numbers
+- It translates the correctors and numbers into machine understandable code (Translation)
+1. Translation
+2. Before the data is transmitted the translated bits are reduced (It can be lossy /lossless) - it is done for faster data transmission
+3. Encryption - uses SSL Secure Socket Layer (SSL) is used for encryption and decryption in presentation Layer
+
+3. Session Layer:
+----------------
+
+
+
+
+
+
+
+ 
 
