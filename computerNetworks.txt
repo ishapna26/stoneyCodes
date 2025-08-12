@@ -83,7 +83,7 @@ Functions:
 
 
 6. DATALINK LAYER: It is embedded as software in NIC of a computer to provide means to transfer the data from one computer to another computer (local n/w) via local media:cables,cu wire 
-------------------
+------------------                                                                                                                                                         signals
 - It receives the data packets from the network layer
 - It forms data frame by adding mac address to the data packets (this prcess is called physical addressing)
 - It controls how the data is placed and received from the media
@@ -93,8 +93,42 @@ Services:
 1. It allows upper layer of the OSI model access media (using framing techniques)
 2. controls of the data is placed and received from media( using Media Access Control, Error Detection)
 
+1. Access the media
+Imagine 2 diff host (a laptop and a desktop) communicating with each other. Both the devices are connected to different n/w. They communicate via n/w layer protocol
+desktop -> router1 (wired)
+laptop -> router 2 (wireless)
+router1 - satellite - router2 (connection of the router)
+desktop -> data -> laptop
+
+Based on the medium that connects the desktop with router1 the datalink layer adds some data in the head and tail of the ip packet to form a frame
+this frame is then sent to router 1 the router 1 decapsulate the frame into ip packet and encapsulate again to a frame so that it crss the satellite link and reach router r2.
+
+router r2 again decapsulate the received frame and encapsulate into a frame to form wireless datalink frame. Laptop recives the wireless datalink frame and decapsulate it 
+forward it to the n/w layer. Then to application layer . The application layer makes the data visible to the user screen.
+
+Thus the n/w layer or higher layer of the osi model is able to transmit the data over media using datalink layer.
+Hence the datalink layer provides access to media for the higher layer in OSI model.
+
+2. Media Access Control
+- The technique that is used get the frame(data) from the media is called media access control
+- There are number of devices connected to a common media
+- If two more devices connected to common media and send the data at the same time, then there may be possibilty of collision between the two meassages.
+- To overcome this the datalink layer keeps an eye on when the shared media is free so the device can transmit the data to the receiver. 
+  This is called CSMA (Carrier Sense Multiple Access)
+Hence the datalink layer with its media access control techniques controls the data transmission.
 
 
+7. Physical Layer
+-----------------
+Segment -> Packets -> Frame -> sequence of bits
+Physical Layer converts the binary sequence into signals and transmit over local media
+It can be
+1. Electrical signal - cu wire
+2. Light signal - optical cable
+3. Radio signal - AIR
+
+At receiver side the physical layer receives signal ->convert to bits -> Frames -> Datalink layer -> Higher Layers of the OSI model ->
+Application Layer protocols makes the data visible to the receiver screen.
 
 
 
