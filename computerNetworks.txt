@@ -1,4 +1,5 @@
-OSI Model: Open System Interconnection Model
+PUTTY: open source terminal emulator. It is used to manage UNIX based system from windows.
+OSI Model: Open System Interconnection Model 
 --------------------------------------------
 It describes how the data is transmitted from one computer to another computer in a computer network. (Two or more devices connected via internet).
 
